@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
         let label = UILabel(frame: CGRect(x: 20, y: 330, width: view.frame.width - 40, height: 60))
         label.numberOfLines = 2
         label.textAlignment = .center
-        label.font = .boldSystemFont(ofSize: 24)
+        label.font = UIFont(name: "Pretendard-Bold", size: 24)
         label.textColor = .white
         return label
     }()
@@ -28,7 +28,7 @@ class WelcomeViewController: UIViewController {
         button.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         button.setTitle("다시 로그인하기", for: .normal)
         button.setTitleColor(UIColor(red: 172/255, green: 176/255, blue: 185/255, alpha: 1), for: .normal)
-        button.titleLabel?.font = UIFont(name:"Pretendard-Bold", size: 18)
+        button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
         button.addTarget(self, action: #selector(backToLoginButtonDidTap), for: .touchUpInside)
         return button
     }()
@@ -37,7 +37,7 @@ class WelcomeViewController: UIViewController {
     private lazy var dateLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 20, y: 400, width: view.frame.width - 40, height: 30))
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 14)
+        label.font = UIFont(name: "Pretendard-Regular", size: 14)
         label.textColor = .white
         return label
     }()

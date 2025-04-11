@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
         label.textColor = .black    // 글자 색상
         label.textAlignment = .center   // 가운데 정렬
         label.numberOfLines = 2     // 2줄까지 표시
-        label.font = .boldSystemFont(ofSize: 16)    // 굵은 폰트
+        label.font = UIFont(name: "Pretendard-Bold", size: 16)    // 굵은 폰트
         return label
     }()
     
@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     private let idTextField: UITextField = {
         let textField = UITextField(frame: CGRect(x: 20, y: 276, width: 335, height: 52))
         textField.placeholder = "아이디"   // placeholder=힌트 텍스트
-        textField.font = .systemFont(ofSize: 14)    // 글자 크기
+        textField.font = UIFont(name: "Pretendard-Regular", size: 14)    // 글자 크기
         //연한 회색 배경
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         
@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
     private let passwordTextField: UITextField = {
         let textField = UITextField(frame: CGRect(x: 20, y: 335, width: 335, height: 52))
         textField.placeholder = "비밀번호"
-        textField.font = UIFont.systemFont(ofSize: 14)
+        textField.font = UIFont(name: "Pretendard-Regular", size: 14)
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         
         textField.layer.cornerRadius = 8
@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
         button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
         button.setTitle("로그인하기", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 18)
+        button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
         button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
         return button
     }()
@@ -144,7 +144,7 @@ class LoginViewController: UIViewController {
         let button = UIButton(frame: CGRect(x: 21, y: 490, width: 332, height: 44))
         button.setTitle("회원가입", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
+        button.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 16)
         button.addTarget(self, action: #selector(signupButtonDidTap), for: .touchUpInside)
         return button
     }()
